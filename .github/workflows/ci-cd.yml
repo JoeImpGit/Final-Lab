@@ -13,7 +13,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://github.com #${{ steps.deployment.outputs.page_url }}
+      url: https://joemcmc.github.io/cicd #${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
      - name: Get Code
