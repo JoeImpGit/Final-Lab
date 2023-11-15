@@ -2,10 +2,10 @@ name: CI/CD WorkFlow
 
 on:
   push:
-  permissions: write-all
     branches:
      - main
   workflow_dispatch:
+permissions: write-all
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
