@@ -5,11 +5,12 @@ on:
     branches:
      - main
   workflow_dispatch:
-permissions: 
-   write-all
-    read-all
 jobs:
   build-test-deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
