@@ -2,6 +2,7 @@ name: CI/CD WorkFlow
 
 on:
   push:
+  permissions: write-all
     branches:
      - main
   workflow_dispatch:
