@@ -5,17 +5,22 @@ on:
     branches:
      - main
   workflow_dispatch:
-permissions: write-all
+permissions: 
+   write-all
+    read-all
 jobs:
   build-test-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    # - name: Get Code
-    #   uses: actions/checkout@v4
+     - name: Get Code
+       uses: actions/checkout@v4
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-       path: './dist'
-    - name: Deploy Site
-      uses: actions/deploy-pages@v1.2.9
+     - name: Upload artifact
+       uses: actions/upload-pages-artifact@v2
+       with:
+        path: './dist'
+     - name: Deploy Site
+       uses: actions/deploy-pages@v1.2.9
