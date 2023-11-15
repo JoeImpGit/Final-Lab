@@ -11,7 +11,7 @@
 body {
   display: grid;
   place-items: center;
-  background-color: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+  background-color: limegreen;
   font-family: 'Work Sans', sans-serif;
 }
 
